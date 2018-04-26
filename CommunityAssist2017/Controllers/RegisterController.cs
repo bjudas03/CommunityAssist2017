@@ -11,7 +11,7 @@ namespace CommunityAssist2017.Controllers
     {
         CommunityAssist2017Entities db = new CommunityAssist2017Entities();
         // GET: Register
-        public ActionResult Index()
+        public ActionResult Register()
         {
             return View();
         }
@@ -20,7 +20,7 @@ namespace CommunityAssist2017.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index([Bind(Include ="LastName," +
+        public ActionResult Register([Bind(Include ="LastName," +
             "FirstName," +
             "Email," +
             "Password," +
