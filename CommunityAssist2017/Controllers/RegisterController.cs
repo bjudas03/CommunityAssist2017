@@ -23,8 +23,8 @@ namespace CommunityAssist2017.Controllers
         public ActionResult Register([Bind(Include ="LastName," +
             "FirstName," +
             "Email," +
-            "Password," +
-            "ApartmentNumber," +
+            "PlainPassword," +
+            "Apartment," +
             "Street," +
             "City," +
             "State," +
@@ -37,6 +37,7 @@ namespace CommunityAssist2017.Controllers
             if (result != -1)
             {
                 msg.MessageText = "Welcome! Congrats on Registering, " + np.FirstName + " " + np.LastName;
+                //return RedirectToAction("Login","Index");
 
             } 
             else
