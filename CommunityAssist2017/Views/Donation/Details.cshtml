@@ -1,0 +1,29 @@
+﻿@model IEnumerable<CommunityAssist2017.Models.Donation>
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="jumbotron">
+    <h1>Donation Details</h1>
+
+</div>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.DonationKey)</th>
+        <th>@Html.DisplayNameFor(model => model.PersonKey)</th>
+        <th>@Html.DisplayNameFor(model => model.DonationDate)</th>
+        <th>@Html.DisplayNameFor(model => model.DonationAmount)</th>
+        <th>@Html.DisplayNameFor(model => model.DonationConfirmationCode)</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(model => item.DonationKey)</td>
+            <td>@Html.DisplayFor(model => item.PersonKey)</td>
+            <td>@Html.DisplayFor(model => item.DonationDate)</td>
+            <td>@Html.DisplayFor(model => item.DonationAmount)</td>
+            <td>@Html.DisplayFor(model => item.DonationConfirmationCode)</td>
+        </tr>
+    }
+</table>
