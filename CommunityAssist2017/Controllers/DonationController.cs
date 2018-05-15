@@ -33,8 +33,7 @@ namespace CommunityAssist2017.Controllers
             db.Donations.Add(d);
             db.SaveChanges();
             Message m = new Message("New donation has been entered");
-            return View("Details",db.Donations.ToList());  //-> Needs work - Not functioning to list db.Dontations Details
-            //return RedirectToAction("Details", "Donation"); -> Needs work - Not functioning to list db.Dontations Details
+            return View("Details", db.Donations.ToList());
             //return View("Result", m);
         }
 
